@@ -1,0 +1,7 @@
+import java.util.*;
+import java.io.*;
+
+public class UltimateTeam{
+  private ArrayList<UltimatePlayer> players;
+  private ArrayList<Coach> coaches;
+}
