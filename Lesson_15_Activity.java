@@ -9,22 +9,20 @@ class Lesson_15_Activity{
      
      public static void sortAndPrint(String[] list){
           for(int i = 0;i < list.length;i++){
-               int pos = i;
+               int current = i;
+               int lowest = i;
                for(int j = i;j < list.length;j++){
-                    if(list[j].compareTo(list[i]) < 0){
-                         pos = j;
+                    if(list[j].compareTo(list[lowest]) < 0){
+                         lowest = j;
                     }
                }
-               Lesson_15_Activity.swap(list, i, pos);
+               String temp = list[current];
+               list[current] = list[lowest];
+               list[lowest] = temp;
           }
           for(int i = 0;i < list.length;i++){
                System.out.print(list[i] + " ");
           }
      }
      
-     public static void swap(String[] array, int first, int second){
-          String temp = array[second];
-          array[second] = array[first];
-          array[first] = temp;
-     }
 }
